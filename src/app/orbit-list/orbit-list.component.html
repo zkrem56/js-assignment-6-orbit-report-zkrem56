@@ -6,12 +6,12 @@
         <th>Orbit Type</th>
         <th>Launch Date</th>
     </tr>
-    <tr class="data-row">
-        <td>GPS 938</td>
-        <td>Positioning</td>
-        <td>true</td>
-        <td>HIGH</td>
-        <td>2001-11-01</td>
+    <tr *ngFor="let data of satellites" class="data-row">
+        <td>{{data.name}}</td>
+        <td>{{data.type}}</td>
+        <td>{{data.operational}}</td>
+        <td>{{data.orbitType}}</td>
+        <td>{{data.launchDate}}</td>
     </tr>
 </table>
 
